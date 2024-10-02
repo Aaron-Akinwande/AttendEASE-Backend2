@@ -6,16 +6,32 @@ import {
   courses,
   admins,
   notifications,
-} from "./mockData.mjs";
+} from "./db.mjs";
+import mongoose from "mongoose";
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // Middleware to parse JSON bodies
+app.use(express.json());
+
+// // MongoDB connection string (use your own)
+// const mongoURI = 'mongodb://localhost:27017/AttendEASE';
+
+// // Connect to MongoDB using Mongoose
+// mongoose.connect(mongoURI)
+//     .then(() => console.log('MongoDB connected successfully'))
+//     .catch(err => console.log('MongoDB connection error:', err));
 
 // API Routes
 app.get("/", (req, res) => {
   res.json("Welcome to the AttendEase Backend");
 });
+
+
+
+
+
+
+
 
 // Get all students for a specific admin
 app.get("/admins/:adminId/students", (req, res) => {
@@ -142,6 +158,17 @@ app.delete("/admins/:adminId/students/:id", (req, res) => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
 // Get all lecturers for a specific admin
 app.get("/admins/:adminId/lecturers", (req, res) => {
   const { adminId } = req.params;
@@ -265,6 +292,20 @@ app.delete("/admins/:adminId/lecturers/:id", (req, res) => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Get all courses for a specific admin
 app.get("/admins/:adminId/courses", (req, res) => {
   const { adminId } = req.params;
@@ -365,6 +406,20 @@ app.delete("/admins/:adminId/courses/:id", (req, res) => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Get all notifications for a specific admin
 app.get("/admins/:adminId/notifications", (req, res) => {
   const { adminId } = req.params;
@@ -400,6 +455,23 @@ app.post("/admins/:adminId/notifications", (req, res) => {
     res.status(404).json({ message: "Admin not found" });
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Get all admins
 app.get("/admins", async (req, res) => {

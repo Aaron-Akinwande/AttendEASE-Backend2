@@ -5,8 +5,8 @@
   "main": "index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon ./src/index.mjs",
-    "start": "node ./src/index.mjs"
+    "start:dev": "node init && nodemon ./src/index.mjs",
+    "start": "node init && node ./src/index.mjs"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,8 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.0"
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
