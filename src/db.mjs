@@ -15,8 +15,16 @@ export const students = [
         courseName: 'Mathematics 101',
         courseLecturer: 'Dr. Alice Brown',
         totalSessions: 10,
-        attendedSessions: 8,
-        attendancePercentage: (8 / 10) * 100,
+        attendedSessions: 5, // Matches with courses array
+        attendancePercentage: (5 / 10) * 100, // Updated to 50%
+      },
+      {
+        courseId: 2,
+        courseName: 'Physics 101',
+        courseLecturer: 'Dr. Alice Brown',
+        totalSessions: 10,
+        attendedSessions: 8, // Matches with courses array
+        attendancePercentage: (8 / 10) * 100, // Updated to 80%
       },
     ],
     department: 'Computer Science',
@@ -33,12 +41,20 @@ export const students = [
     password: 'Smith',
     courses: [
       {
+        courseId: 1,
+        courseName: 'Mathematics 101',
+        courseLecturer: 'Dr. Alice Brown',
+        totalSessions: 10,
+        attendedSessions: 5, // Matches with courses array
+        attendancePercentage: (5 / 10) * 100, // Updated to 50%
+      },
+      {
         courseId: 2,
-        courseName: 'Physics 202',
+        courseName: 'Physics 101',
         courseLecturer: 'Prof. Jane Smith',
-        totalSessions: 12,
-        attendedSessions: 11,
-        attendancePercentage: (11 / 12) * 100,
+        totalSessions: 10,
+        attendedSessions: 7.5, // Matches with courses array
+        attendancePercentage: (7.5 / 10) * 100, // Updated to 75%
       },
     ],
     department: 'Physics',
@@ -59,8 +75,8 @@ export const students = [
         courseName: 'Chemistry 101',
         courseLecturer: 'Dr. Bob Grey',
         totalSessions: 15,
-        attendedSessions: 13,
-        attendancePercentage: (13 / 15) * 100,
+        attendedSessions: 14.25, // Matches with courses array
+        attendancePercentage: (14.25 / 15) * 100, // Updated to 95%
       },
     ],
     department: 'Chemistry',
@@ -81,12 +97,13 @@ export const students = [
         courseName: 'Biology 202',
         courseLecturer: 'Dr. Susan Black',
         totalSessions: 10,
-        attendedSessions: 9,
-        attendancePercentage: (9 / 10) * 100,
+        attendedSessions: 7, // Matches with courses array
+        attendancePercentage: (7 / 10) * 100, // Updated to 70%
       },
     ],
     department: 'Biology',
-  },{
+  },
+  {
     id: 5,
     adminId: 1, // Admin 1
     studentMatric: 'STU005',
@@ -102,13 +119,14 @@ export const students = [
         courseName: 'Mathematics 101',
         courseLecturer: 'Dr. Alice Brown',
         totalSessions: 10,
-        attendedSessions: 8,
-        attendancePercentage: (8 / 10) * 100,
+        attendedSessions: 5, // Matches with courses array
+        attendancePercentage: (5 / 10) * 100, // Updated to 50%
       },
     ],
     department: 'Computer Science',
   },
 ];
+
 
 export const lecturers = [
   {
@@ -180,32 +198,37 @@ export const courses = [
       { 
         id: 1,
         name: 'John Doe', 
-        attendedSessions: 5 
+        attendedSessions: 5, // Matches student's attended sessions
       },
       { 
         id: 2,
         name: 'Jane Smith', 
-        attendedSessions: 5 
+        attendedSessions: 5, // Matches student's attended sessions
+      },
+      { 
+        id: 5,
+        name: 'Jack Daniels', 
+        attendedSessions: 5, // Matches student's attended sessions
       },
     ],
     totalSessions: 10,
-    totalStudents: 2,
+    totalStudents: 3,
   },
   {
     courseId: 2,
     adminId: 1, // Admin 1
     courseName: 'Physics 101',
-    courseLecturer: '',
+    courseLecturer: 'Prof. Jane Smith',
     students: [
       { 
         id: 1,
         name: 'John Doe', 
-        attendedSessions: 8 
+        attendedSessions: 8, // Matches student's attended sessions
       },
       { 
         id: 2,
         name: 'Jane Smith', 
-        attendedSessions: 7.5 
+        attendedSessions: 7.5, // Matches student's attended sessions
       },
     ],
     totalSessions: 10,
@@ -220,7 +243,7 @@ export const courses = [
       { 
         id: 3,
         name: 'Emily Clark', 
-        attendedSessions: 14.25 
+        attendedSessions: 14.25, // Matches student's attended sessions
       },
     ],
     totalSessions: 15,
@@ -235,13 +258,14 @@ export const courses = [
       { 
         id: 4,
         name: 'Michael Jordan', 
-        attendedSessions: 7 
+        attendedSessions: 7, // Matches student's attended sessions
       },
     ],
     totalSessions: 10,
     totalStudents: 1,
   },
 ];
+
 
 
 
